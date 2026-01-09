@@ -1,78 +1,11 @@
-AgilStore é uma aplicação CLI (Command Line Interface) desenvolvida em Node.js para gestão completa de inventário. O sistema permite gerenciar produtos, controle de estoque, buscas avançadas e geração de relatórios, tudo diretamente pelo terminal com uma interface intuitiva e amigável.
+AgilStore – Sistema de Gestão de Inventário (CLI)
+AgilStore é uma aplicação CLI (Command Line Interface) desenvolvida em Node.js para gestão simples de inventário. O sistema permite cadastrar, listar, buscar, atualizar e excluir produtos, além de exibir estatísticas do estoque, tudo diretamente pelo terminal.
 
-https://img.shields.io/badge/Node.js-16.x+-green
-https://img.shields.io/badge/JavaScript-ES6+-yellow
-https://img.shields.io/badge/Interface-CLI-blue
-https://img.shields.io/badge/Status-Produ%C3%A7%C3%A3o-success
-
-✨ Funcionalidades Principais
-📦 Gestão de Produtos
-✅ Cadastro completo - Nome, categoria, quantidade e preço
-
-✅ Listagem inteligente - Filtros e ordenações avançadas
-
-✅ Busca avançada - Por ID, nome ou categoria
-
-✅ Atualização flexível - Edite apenas o que precisa
-
-✅ Exclusão segura - Com confirmação obrigatória
-
-📊 Relatórios e Estatísticas
-Total de produtos cadastrados
-
-Valor total em estoque
-
-Distribuição por categorias
-
-Alertas de estoque baixo (< 5 unidades)
-
-Produtos em falta (estoque zero)
-
-Destaques (produto mais caro/mais barato)
-
-🛡️ Recursos Técnicos
-Persistência local via arquivo JSON
-
-Validação robusta de todas as entradas
-
-Interface amigável com feedback visual
-
-Formatação profissional de valores monetários
-
-Limpeza automática de dados de entrada
-
-Encerramento seguro com salvamento automático
-
-🛠️ Tecnologias Utilizadas
-Tecnologia	Finalidade
-Node.js	Ambiente de execução JavaScript
-JavaScript ES6+	Lógica da aplicação
-fs (File System)	Persistência de dados em arquivos
-readline	Leitura de entrada do usuário
-Intl.NumberFormat	Formatação de moeda (pt-BR)
-Console.table	Exibição estruturada de dados
-Nota: O projeto não utiliza dependências externas - apenas módulos nativos do Node.js.
-
-📁 Estrutura do Projeto
-text
-agilstore/
-│
-├── produtos.js              # Código principal da aplicação
-├── produtos.json           # Banco de dados (criado automaticamente)
-├── README.md              # Esta documentação
-│
-└── (opcional)
-    ├── package.json       # Configuração do projeto
-    └── .gitignore        # Ignorar arquivos temporários
-🚀 Como Executar o Projeto
+🚀 Como Executar o Projeto Localmente
 Pré-requisitos
-Node.js versão 16 ou superior
+Node.js instalado (versão 16 ou superior recomendada)
 
-Terminal/console compatível
-
-50 MB de espaço livre em disco
-
-Passo a Passo
+Passo a passo
 Clone o repositório:
 
 bash
@@ -85,52 +18,62 @@ Execute a aplicação:
 
 bash
 node produtos.js
-Use o sistema:
-
-Siga as instruções no terminal
-
-Escolha opções digitando números
-
-Pressione ENTER para confirmar
+O menu principal será exibido no terminal. Basta escolher as opções digitando os números correspondentes.
 
 Execução Rápida
 bash
 # Em uma linha:
-git clone <url> && cd agilstore && node produtos.js
-🎮 Guia de Uso
-Menu Principal
-text
-════════════════════════════════════════════════════════
-          SISTEMA DE GESTÃO DE INVENTÁRIO
-════════════════════════════════════════════════════════
+git clone <url-do-repositorio> && cd agilstore && node produtos.js
+💻 Tecnologias Utilizadas
+Módulos Nativos do Node.js
+fs (File System) - Para persistência de dados em arquivo JSON
 
-  1. Adicionar produto
-  2. Listar produtos
-  3. Buscar produto
-  4. Atualizar produto
-  5. Excluir produto
-  6. Estatísticas do estoque
+readline - Para leitura de entrada do usuário
 
-  0. Sair
-════════════════════════════════════════════════════════
-Exemplos de Uso
-1. Adicionar Produto
+console.table - Para exibição estruturada de dados no terminal
+
+Intl.NumberFormat - Para formatação de moeda (pt-BR)
+
+Linguagem e Ambiente
+Node.js - Ambiente de execução JavaScript
+
+JavaScript (ES6+) - Lógica da aplicação
+
+Características Técnicas
+✅ Sem dependências externas - Apenas módulos nativos do Node.js
+
+✅ Persistência local - Dados salvos em arquivo produtos.json
+
+✅ Interface CLI amigável - Mensagens claras e feedback visual
+
+✅ Validação de dados - Entradas seguras e consistentes
+
+📁 Estrutura do Projeto
 text
-Nome do produto: Smartphone XYZ
-Categoria: Eletrônicos
-Quantidade em estoque: 25
-Preço unitário R$: 1299.90
-2. Listar Produtos
-text
-Como deseja listar?
-1. Listar todos
-2. Filtrar por categoria
-3. Ordenar por nome (A-Z)
-4. Ordenar por quantidade
-5. Ordenar por preço
-3. Buscar Produto
-text
-Busque por:
-• ID (ex: 1, 2, 3)
-• Parte do nome (ex: "fone")
-• Parte da categoria (ex: "eletrônicos")
+agilstore/
+├── produtos.js          # Código principal da aplicação
+├── produtos.json       # Banco de dados local (criado automaticamente)
+└── README.md          # Documentação do projeto
+📝 Observações Importantes
+O projeto não utiliza banco de dados externo - todos os dados são salvos localmente no arquivo produtos.json
+
+O arquivo produtos.json já acompanha o repositório para permitir execução imediata
+
+Não há necessidade de configuração adicional ou instalação de dependências
+
+Foco em experiência do usuário no terminal e organização do código
+
+🎯 Objetivo do Projeto
+Demonstrar capacidade de:
+
+Estruturar uma aplicação funcional em Node.js
+
+Implementar boas práticas de organização de código
+
+Criar validação de dados e tratamento de erros
+
+Desenvolver interface amigável em aplicações CLI
+
+Documentar clara e completamente o projeto
+
+Desenvolvido como projeto de estudo e avaliação técnica.
