@@ -1,82 +1,86 @@
-AgilStore – Sistema de Gestão de Inventário (CLI)
+# AgilStore — Sistema de Gestão de Inventário (CLI)
 
-AgilStore é uma aplicação CLI (Command Line Interface) desenvolvida em Node.js para gestão simples de inventário. O sistema permite cadastrar, listar, buscar, atualizar e excluir produtos, além de exibir estatísticas do estoque, tudo diretamente pelo terminal.
+AgilStore é uma aplicação de **linha de comando (CLI)** desenvolvida em **Node.js** para gerenciamento de inventário.  
+O sistema permite cadastrar, listar, buscar, atualizar, excluir produtos e visualizar estatísticas do estoque, com foco em **clareza, usabilidade e experiência no terminal**.
 
-Como Executar o Projeto Localmente
-Pré-requisitos
-Node.js instalado (versão 16 ou superior recomendada)
+O projeto foi desenvolvido como parte de um **desafio técnico**, priorizando organização de código, validações, persistência de dados e UX aplicada ao terminal.
 
-Passo a passo
-Clone o repositório:
+---
 
-bash
-git clone <url-do-repositorio>
+## Funcionalidades
 
-Acesse a pasta do projeto:
+- Cadastro de produtos
+- Listagem com:
+  - filtros por categoria  
+  - ordenação por nome, quantidade ou preço
+- Busca por ID, nome ou categoria
+- Atualização parcial de produtos (sem sobrescrever dados não alterados)
+- Exclusão com confirmação
+- Estatísticas de inventário:
+  - total de produtos
+  - valor total em estoque
+  - produtos com estoque baixo
+  - categorias
+- Persistência de dados em arquivo JSON
+- Interface amigável no terminal (mensagens claras, feedback visual e navegação simples)
 
-bash
+---
+
+## Tecnologias Utilizadas
+
+- **Node.js**
+- **JavaScript**
+- Módulos nativos:
+  - `fs` (File System)
+  - `readline`
+- Armazenamento local em arquivo `.json`
+- Execução via terminal (CLI)
+
+> O projeto **não utiliza bibliotecas externas**, garantindo fácil execução em qualquer ambiente com Node.js instalado.
+
+---
+
+## Como executar o projeto localmente
+
+### 1. Pré-requisitos
+
+- Node.js versão 16 ou superior  
+  https://nodejs.org
+
+---
+
+### 2. Clonar o repositório
+
+```bash
+git clone https://github.com/SEU-USUARIO/agilstore.git
+
+````
+Entre na pasta do projeto
+```bash
 cd agilstore
-Execute a aplicação:
+```
 
-bash
-node produtos.js
-O menu principal será exibido no terminal. Basta escolher as opções digitando os números correspondentes.
+3. Executar a aplicação
 
-Execução Rápida
-bash
-# Em uma linha:
-git clone <url-do-repositorio> && cd agilstore && node produtos.js
-💻 Tecnologias Utilizadas
-Módulos Nativos do Node.js
-fs (File System) - Para persistência de dados em arquivo JSON
+```bash 
+node index.js
+```
 
-readline - Para leitura de entrada do usuário
+O sistema será iniciado diretamente no terminal.
 
-console.table - Para exibição estruturada de dados no terminal
+---
 
-Intl.NumberFormat - Para formatação de moeda (pt-BR)
+## Persistência de Dados
 
-Linguagem e Ambiente
-Node.js - Ambiente de execução JavaScript
+Os dados são armazenados no arquivo produtos.json
 
-JavaScript (ES6+) - Lógica da aplicação
+Caso o arquivo não exista, ele é criado automaticamente
 
-Características Técnicas
-✅ Sem dependências externas - Apenas módulos nativos do Node.js
+Todas as operações salvam os dados imediatamente
 
-✅ Persistência local - Dados salvos em arquivo produtos.json
+---
 
-✅ Interface CLI amigável - Mensagens claras e feedback visual
+### Autoria
 
-✅ Validação de dados - Entradas seguras e consistentes
-
-📁 Estrutura do Projeto
-text
-agilstore/
-├── produtos.js          # Código principal da aplicação
-├── produtos.json       # Banco de dados local (criado automaticamente)
-└── README.md          # Documentação do projeto
-📝 Observações Importantes
-O projeto não utiliza banco de dados externo - todos os dados são salvos localmente no arquivo produtos.json
-
-O arquivo produtos.json já acompanha o repositório para permitir execução imediata
-
-Não há necessidade de configuração adicional ou instalação de dependências
-
-Foco em experiência do usuário no terminal e organização do código
-
-🎯 Objetivo do Projeto
-Demonstrar capacidade de:
-
-Estruturar uma aplicação funcional em Node.js
-
-Implementar boas práticas de organização de código
-
-Criar validação de dados e tratamento de erros
-
-Desenvolver interface amigável em aplicações CLI
-
-Documentar clara e completamente o projeto
-
-Desenvolvido como projeto de estudo e avaliação técnica.
-
+Desenvolvido por Patricia Assaf
+Projeto criado como parte do desafio técnico para a Acelerado Ágil
