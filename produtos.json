@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "nome": "Smartphone Galaxy A14",
+    "categoria": "Smartphones",
+    "quantidade": 15,
+    "preco": 1299.95
+  },
+  {
+    "id": 2,
+    "nome": "Notebook Lenovo Ideapad 3",
+    "categoria": "Laptops",
+    "quantidade": 5,
+    "preco": 3499.95
+  },
+  {
+    "id": 3,
+    "nome": "Cabo USB-C 1m",
+    "categoria": "Acessórios",
+    "quantidade": 41,
+    "preco": 29.85
+  },
+  {
+    "id": 4,
+    "nome": "Fone de Ouvido Bluetooth JBL",
+    "categoria": "Áudio",
+    "quantidade": 2,
+    "preco": 195.99
+  },
+  {
+    "id": 5,
+    "nome": "Carregador Rápido 20W",
+    "categoria": "Carregadores",
+    "quantidade": 12,
+    "preco": 89.99
+  }
+]
