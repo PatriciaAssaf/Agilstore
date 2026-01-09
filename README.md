@@ -1,103 +1,136 @@
-# AgilStore – Sistema de Gestão de Inventário (CLI)
+AgilStore é uma aplicação CLI (Command Line Interface) desenvolvida em Node.js para gestão completa de inventário. O sistema permite gerenciar produtos, controle de estoque, buscas avançadas e geração de relatórios, tudo diretamente pelo terminal com uma interface intuitiva e amigável.
 
-AgilStore é uma aplicação **CLI (Command Line Interface)** desenvolvida em **Node.js** para gestão simples de inventário.  
-O sistema permite cadastrar, listar, buscar, atualizar e excluir produtos, além de exibir **estatísticas do estoque**, tudo diretamente pelo terminal, com foco em **experiência do usuário**, clareza e organização.
+https://img.shields.io/badge/Node.js-16.x+-green
+https://img.shields.io/badge/JavaScript-ES6+-yellow
+https://img.shields.io/badge/Interface-CLI-blue
+https://img.shields.io/badge/Status-Produ%C3%A7%C3%A3o-success
 
-O projeto foi desenvolvido com fins **didáticos e avaliativos**, priorizando código legível, fluxo intuitivo e facilidade de execução local.
+✨ Funcionalidades Principais
+📦 Gestão de Produtos
+✅ Cadastro completo - Nome, categoria, quantidade e preço
 
----
+✅ Listagem inteligente - Filtros e ordenações avançadas
 
-## Funcionalidades
+✅ Busca avançada - Por ID, nome ou categoria
 
-- Cadastro de produtos (nome, categoria, quantidade e preço)
-- Listagem de produtos:
-  - Todos
-  - Filtragem por categoria
-  - Ordenação por nome, quantidade ou preço
-- Busca de produtos por:
-  - ID
-  - Nome
-  - Categoria
-- Atualização de produtos existentes
-- Exclusão de produtos com confirmação
-- Estatísticas do inventário:
-  - Total de produtos
-  - Itens em estoque
-  - Valor total do estoque
-  - Produtos com estoque baixo ou zerado
-  - Produto mais caro e mais barato
-- Persistência de dados local via arquivo JSON
-- Interface amigável no terminal (mensagens claras, tabelas e feedback visual)
+✅ Atualização flexível - Edite apenas o que precisa
 
----
+✅ Exclusão segura - Com confirmação obrigatória
 
-## Tecnologias Utilizadas
+📊 Relatórios e Estatísticas
+Total de produtos cadastrados
 
-- **Node.js**
-- **JavaScript (ES6+)**
-- **Módulos nativos do Node.js**:
-  - `fs` (File System)
-  - `readline`
-- **console.table** para exibição estruturada de dados no terminal
-- **Intl.NumberFormat** para formatação de moeda (pt-BR)
+Valor total em estoque
 
-> Não há dependências externas nem bibliotecas de terceiros.
+Distribuição por categorias
 
----
+Alertas de estoque baixo (< 5 unidades)
 
-## Estrutura do Projeto
+Produtos em falta (estoque zero)
 
+Destaques (produto mais caro/mais barato)
 
-O arquivo `produtos.json` funciona como um banco de dados simples em formato JSON, utilizado apenas para fins didáticos.
+🛡️ Recursos Técnicos
+Persistência local via arquivo JSON
 
----
+Validação robusta de todas as entradas
 
-## Como Executar o Projeto Localmente
+Interface amigável com feedback visual
 
-### Pré-requisitos
-- Node.js instalado (versão 16 ou superior recomendada)
+Formatação profissional de valores monetários
 
-### Passo a passo
+Limpeza automática de dados de entrada
 
-1. Clone o repositório:
-   ```bash
-   git clone <url-do-repositorio>
+Encerramento seguro com salvamento automático
 
+🛠️ Tecnologias Utilizadas
+Tecnologia	Finalidade
+Node.js	Ambiente de execução JavaScript
+JavaScript ES6+	Lógica da aplicação
+fs (File System)	Persistência de dados em arquivos
+readline	Leitura de entrada do usuário
+Intl.NumberFormat	Formatação de moeda (pt-BR)
+Console.table	Exibição estruturada de dados
+Nota: O projeto não utiliza dependências externas - apenas módulos nativos do Node.js.
+
+📁 Estrutura do Projeto
+text
+agilstore/
+│
+├── produtos.js              # Código principal da aplicação
+├── produtos.json           # Banco de dados (criado automaticamente)
+├── README.md              # Esta documentação
+│
+└── (opcional)
+    ├── package.json       # Configuração do projeto
+    └── .gitignore        # Ignorar arquivos temporários
+🚀 Como Executar o Projeto
+Pré-requisitos
+Node.js versão 16 ou superior
+
+Terminal/console compatível
+
+50 MB de espaço livre em disco
+
+Passo a Passo
+Clone o repositório:
+
+bash
+git clone <url-do-repositorio>
 Acesse a pasta do projeto:
 
+bash
 cd agilstore
-
-
 Execute a aplicação:
 
-node index.js
+bash
+node produtos.js
+Use o sistema:
 
+Siga as instruções no terminal
 
-O menu principal será exibido no terminal.
-Basta escolher as opções digitando os números correspondentes.
+Escolha opções digitando números
 
-Observações Importantes
+Pressione ENTER para confirmar
 
-O projeto não utiliza banco de dados externo.
+Execução Rápida
+bash
+# Em uma linha:
+git clone <url> && cd agilstore && node produtos.js
+🎮 Guia de Uso
+Menu Principal
+text
+════════════════════════════════════════════════════════
+          SISTEMA DE GESTÃO DE INVENTÁRIO
+════════════════════════════════════════════════════════
 
-Todos os dados são salvos localmente no arquivo produtos.json.
+  1. Adicionar produto
+  2. Listar produtos
+  3. Buscar produto
+  4. Atualizar produto
+  5. Excluir produto
+  6. Estatísticas do estoque
 
-O arquivo já acompanha o repositório para permitir execução imediata, sem necessidade de configuração adicional.
-
-O foco do projeto está na lógica, organização do código e UX aplicada ao terminal, e não em deploy ou ambiente de produção.
-
-Objetivo do Projeto
-
-Demonstrar:
-
-Capacidade de estruturar uma aplicação funcional
-
-Boas práticas de organização de código
-
-Validação de dados e tratamento de erros
-
-Atenção à experiência do usuário mesmo em aplicações de terminal
-
-Clareza na comunicação e documentação
-
-Desenvolvido como projeto de estudo e avaliação técnica.
+  0. Sair
+════════════════════════════════════════════════════════
+Exemplos de Uso
+1. Adicionar Produto
+text
+Nome do produto: Smartphone XYZ
+Categoria: Eletrônicos
+Quantidade em estoque: 25
+Preço unitário R$: 1299.90
+2. Listar Produtos
+text
+Como deseja listar?
+1. Listar todos
+2. Filtrar por categoria
+3. Ordenar por nome (A-Z)
+4. Ordenar por quantidade
+5. Ordenar por preço
+3. Buscar Produto
+text
+Busque por:
+• ID (ex: 1, 2, 3)
+• Parte do nome (ex: "fone")
+• Parte da categoria (ex: "eletrônicos")
