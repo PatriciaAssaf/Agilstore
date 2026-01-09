@@ -1,7 +1,8 @@
 AgilStore – Sistema de Gestão de Inventário (CLI)
+
 AgilStore é uma aplicação CLI (Command Line Interface) desenvolvida em Node.js para gestão simples de inventário. O sistema permite cadastrar, listar, buscar, atualizar e excluir produtos, além de exibir estatísticas do estoque, tudo diretamente pelo terminal.
 
-🚀 Como Executar o Projeto Localmente
+Como Executar o Projeto Localmente
 Pré-requisitos
 Node.js instalado (versão 16 ou superior recomendada)
 
@@ -10,6 +11,7 @@ Clone o repositório:
 
 bash
 git clone <url-do-repositorio>
+
 Acesse a pasta do projeto:
 
 bash
@@ -77,3 +79,4 @@ Desenvolver interface amigável em aplicações CLI
 Documentar clara e completamente o projeto
 
 Desenvolvido como projeto de estudo e avaliação técnica.
+
